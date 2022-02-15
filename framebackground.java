@@ -1,23 +1,23 @@
 import java.awt.*;
 import java.awt.event.*;
-class MyFrame1 extends Frame implements WindowListener
-{
-	String msg=" ";
-	MyFrame1(String s, String s1)
-	{ 
-		super (s);
-		setBackground(Color.pink);
-		msg=s1;
-		addWindowListener(this);
-		repaint();
+class MyFrame2 extends Frame implements WindowListener
+{ 
+    String msg;
+    MyFrame2(String s, String s1)
+    {
+    	super(s);
+    	setBackground(Color.pink);
+    	msg=s1;
+    	addWindowListener(this);
+    	repaint();
+    }
+    public void windowClosed(WindowEvent ae)
+	{
+		
 	}
 	public void windowActivated(WindowEvent ae)
 	{
 		
-	}
-	public void windowClosed(WindowEvent ae)
-	{
-			
 	}
 	public void windowClosing(WindowEvent ae)
 	{
@@ -41,17 +41,17 @@ class MyFrame1 extends Frame implements WindowListener
 	}
 	public void paint(Graphics g)
 	{
-		g.drawString(msg,  100, 150);
+		g.drawString(msg,  200, 100);
 	}
 	
 }
-public class framebackground {
+public class FrameBackground {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		MyFrame1 o2 = new MyFrame1("FrameBackground"," Hello");
-		o2.setSize(500,500);
-		o2.setVisible(true);
+       MyFrame2 o1=new MyFrame2("FrameBackground","Hello World");
+       o1.setSize(new Dimension (350,350));
+       o1.setVisible(true);
 	}
 
 }
